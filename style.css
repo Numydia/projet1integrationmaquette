@@ -1,0 +1,891 @@
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('fonts/roboto-regular-webfont.woff') format('woff'),
+         url('fonts/roboto-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* Commun entre les sections Services et Projets */
+
+hr   /* Bordure entre les petits ronds en dessous des h2 */
+{
+    width: 200px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(217,217,217,0), rgba(217,217,217,1), rgba(217,217,217,0));
+    position: relative;
+    bottom: 15px;
+}
+
+hr:after
+{
+    content: '•';
+    color: rgb(92,173,211);
+    font-size: 50px;
+    padding: 0px 5px;
+    position: relative;
+    top: -28px;
+    background-color: white;
+}
+
+
+
+#u_service i, #u_projets i, .logo_service   /* Couleur des petits ronds en dessous des h2 ainsi que des différents logos dans la partie Service */
+{
+	color: #5CADD3;
+}
+
+#u_service, #u_projets /* h2 Service et Projets et paragraphe*/
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.text_center   /* Pour un retour à la ligne du paragraphe en dessous des h2 Services et Projets */
+{
+	width: 35%;
+}
+
+h1
+{
+	font-size: 1.2em;
+	font-weight: bold;
+	width: 45%;
+}
+
+h2 
+{
+	font-family: 'robotoregular', Georgia, Arial;
+	font-size: 2.8em;
+	font-weight: bold;
+}
+
+h3
+{
+	font-family: 'robotoregular', Georgia, Arial;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+/* Header et Navigation */
+
+#logo
+{
+	margin-top: 30px;
+	margin-bottom: 20px;
+	
+}
+
+header
+{
+	display:flex;
+	justify-content: space-around;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	width: 100%;
+	max-width: 100%;
+	background-color: white;
+    box-shadow: 0px 0px 5px 0px #656565;   /* Rajout d'une ombre en dessous du header pour l'esthétisme */
+	font-family: 'robotoregular', Georgia, Arial;
+}
+
+
+header ul
+{
+	list-style-type: none;   /* On enlève les puces */
+	display: flex;
+	margin-right: 100px;     /* Espacement vers la gauche */
+	margin-top: 25px;		 /* Alignement vertical avec le logo WebAgency */	
+
+}
+
+
+header nav li
+{
+	margin-right: 30px;      /* Espacement entre les boutons de la navigation */
+}
+
+header nav a
+{
+	font-size: 1.1em;
+	text-decoration: none;  /* On enlève le soulignement en dessous des boutons nav */
+	color: #000;   /* Couleur blanche */
+	font-weight: bold;
+}
+
+header nav a:hover      /* Rajout d'une bordure lors qu'on sélectionne un des boutons dans la navigation */
+{
+    border-top: 10px solid #5cadd3;
+    padding-top: 41px;
+}
+
+
+.menu-checkbox
+{
+	opacity: 0;
+}
+
+.menu-toggle
+{
+	opacity: 0;
+}
+
+
+
+
+/* Bannière fille couleur */
+
+
+#banniere_image
+{
+	height: 650px;
+	width: 100%;
+	margin-top: 110px;    /* Marge entre le header et la bannière */
+	background: url('slider/bg1.jpg') round no-repeat;
+	position: relative;
+	margin-bottom: 20px;   /* Marge entre la bannière et la section Service */
+}
+
+#banniere_description
+{
+	position: relative;
+	font-family: 'robotoregular', Georgia, Arial;
+	font-weight: bold;
+	font-size: 2.5em;
+	color: white;
+	padding-left: 140px;   /* Alignement du texte */
+	top: 30%;				/* Alignement du texte */
+}
+
+#rond_banniere_gauche   /* Ajout d'un cercle pour le slider */
+{
+    width: 70px;
+    height: 80px;
+    border-radius: 50%;
+    background: black;
+    opacity: 0.3;
+    position: absolute;
+    top: 46.5%;
+    left: -35px;
+}
+
+
+.fa-angle-left    /* Flèche à gauche pour le slide */
+{
+	color: white;
+	position: absolute;
+	top: 50%;
+	padding-left: 5px;
+}
+
+#rond_banniere_droite    /* Creation d'un demi-cercle */
+{
+    width: 80px;
+    height: 40px;
+    background-color: black;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    transform: rotate(270deg);
+    opacity: 0.3;
+    position: absolute;
+    top: 49.5%;
+    right: -20px;
+}
+
+.fa-angle-right		/* Flèche à droite pour le slider */
+{
+	color: white;
+	position: absolute;
+	top: 50%;
+	right: 6px;
+}
+
+
+
+#banniere_description p
+{
+	font-size: 0.5em;
+	margin-bottom: 30px;   /* Marge entre le paragraphe et le bouton "Plus d'infos" */
+}	
+
+.titre_principal 				/* Couleur pour le span dans le h1 */
+{
+	color: #5B89B8;
+}
+
+.bouton_bleu
+{
+	position: absolute;
+	text-decoration: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 0.6em;
+	text-align: center;
+	padding: 7px 14px 7px 14px;
+	background-color: #6F9BBD;
+	box-shadow: 0px 5px 5px #5a86a8;
+}
+
+
+
+
+
+
+
+/* Section */
+
+/*Nos Services */
+
+
+#service  /* Ajout d'une séparation entre la section service et projet */
+{
+    padding-bottom: 100px;
+}
+
+
+.description_texte, .text_center, form h3, form p    /* Changement de couleur pour les sous titres h2 Services et Projets ainsi que les paragraphes de la section Services */
+{
+	color: rgb(112, 105, 105);
+}
+
+
+
+
+
+/* Liste Service */
+#b_service
+{
+	display: flex;
+	justify-content: center;	
+}
+
+#apple_screen   /* Meilleur alignement avec la partie Projets */
+{
+	margin-left: 200px;
+}
+
+
+#liste_service
+{
+	display:flex;	
+	flex-direction: column;
+	margin-left: 40px;   				/* Espacement entre le texte et les deux logos */
+	justify-content: space-between;
+}	
+
+
+
+#liste_service p  /* Pour rajouter le retour à la ligne */
+{
+	width: 60%;
+}
+
+
+#conteneur_logo
+{
+	display:flex;
+	flex-direction: column;
+	margin-left: 100px;  					/* Ecartement entre l'écran et les logos/textes à droite */
+	justify-content: space-between;
+	
+}
+
+.chart 							/* Ajustement pour que les logos soit mieux centré avec le texte à droite */
+{
+	margin-top: 35px;
+	margin-bottom: 15px;
+}
+.cubes 
+{
+	margin-bottom: 20px;
+}
+.pie
+{	
+	margin-bottom: 20px;	          	  
+}
+
+.logo_bleuservice  /* Modification du point bleu section service */
+{
+	color: rgb(92, 173, 211);
+	position: absolute;
+	z-index: 90;
+	height: 12px;
+	width: 13px;
+	margin-top: 12px;
+	margin-left: 12px;
+}
+
+
+
+
+.description_service h3, p
+{
+	font-family: 'robotoregular', Georgia, Arial;
+	font-weight: bold;
+}
+
+
+
+
+.logo_service       /* Création du cercle autour des logos FontAwesome */
+{
+	border-radius: 50%;
+    border: 1px solid rgb(217,217,217);
+    padding: 1em;
+}
+
+
+
+
+
+
+/* Section Projet */
+
+#projets
+{
+	background-color: rgb(245,245,245);   /* Background gris derrière la section Projet */
+    padding-bottom: 50px;		/* Espacement entre la section Projet et Contact */
+}
+
+
+
+
+
+
+/* Navigation Projets */
+
+#projets ul
+{
+	display:flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 50px;   /* Marge entre sous titre h2 et le portfolio avec la nav */
+}
+
+#projets li
+{
+	padding: 8px 10px;
+	background-color: rgb(214, 209, 209);   /* Background gris */
+	position: relative;
+	font-family: 'robotoregular', Georgia, Arial;
+	font-weight: bold;
+}
+
+#projets li:hover    /* Lorsqu'on passe notre curseur sur la nav */
+{
+	background-color: rgb(111, 155, 189);    		/* Background bleu */
+	color: white;   								/* Changement de couleur de la police au survol d'un des boutons nav */
+	border-bottom:	4px solid rgb(70,140,173);   
+	cursor: pointer;
+}
+
+#projets li:hover:after    /* Ajout du triangle lorsqu'on passe notre curseur sur la nav */
+{
+	content: url('triangle.png');
+	display: flex;
+	position: absolute;
+	padding-top: 2px;
+	left: 45%;
+}
+
+
+
+
+
+
+/* Album section Projet */
+
+#album
+{
+	display:flex;
+	flex-wrap: wrap;   				/* Pour que les images soient sur plusieurs lignes */
+	justify-content: center; 
+	width: 85%;						/* Pour qu'il y est que 4 images */
+	margin: auto;
+}
+
+figure img
+{
+	width: 100%			/* Mise à niveau de la taille des images */
+}
+
+figure 
+{ 
+    position: relative; 
+    height: 175px;
+    width: 300px;
+    margin: 14px 0px 40px 40px;
+}
+
+
+figure h4
+{
+	font-family: 'robotoregular', Georgia, Arial;
+	margin-bottom: -15px;						/* Ajustement des h4 vers le bas au survol des images */
+}
+
+
+.texte_portfolio
+{
+	font-weight: lighter;
+}
+
+
+figcaption    /* Background noir au survol d'une des images */
+{
+	position: absolute;
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	width: 93.5%;
+	padding: 0px 10px 0px 10px;
+	bottom: -14%;
+	opacity: 0;   						/* Opacité pour cacher les informations et les afficher uniquement au survol */
+}
+
+
+figure:hover figcaption 	/* Affichage au survol */
+{
+	opacity: 1;
+	cursor: pointer;
+}
+
+figcaption div     /* Bulle bleu avec oeil à l'intérieur */
+{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(69,144,177);
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;    		/* Centrage l'oeil au milieu du rond */
+    align-items: center;				/* Centrage l'oeil au milieu du rond */
+    position: absolute;
+    left: 80%;
+    bottom: 62px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Formulaire */
+
+
+
+form h2
+{
+	font-size: 2em;
+	font-weight: bold;
+}
+
+form p
+{
+	font-family: 'robotoregular', Georgia, Arial;
+	margin-top: -15px;
+	font-size: 1em;
+	font-weight: lighter;
+
+}
+
+
+#contact
+{
+	width: 99vw;
+	position:relative;
+	background-color: rgb(92,173,211);     /* Ajout du fond bleu */
+}
+
+iframe
+{
+	opacity: 0.5;			/* Opacité fond bleu */
+}
+
+form, iframe
+{
+	width: 100%;
+	height: 600px;
+}
+
+
+form 
+{
+    background-color: rgba(255,255,255,.8);     /* Background pour le formulaire et on baisse l'opacité */
+    width: 300px;
+    height: 88%;		
+    padding-left: 20px;	
+    padding-right: 30px;
+    border-radius: 3px;					/* Arrondissement des angles du formulaire */
+  	top: 7%;							/* Positionnement du formulaire à bonne hauteur par rapport à la map */		
+    right: 5%;							/* Positionnement à droite du formulaire */
+    position: absolute;							
+}
+
+input
+{
+	padding-left: 6px;
+}
+
+
+#nom, #email, #objet
+{
+	height: 20px;
+	margin-bottom: 15px;
+}
+
+textarea 
+{
+    width: 100%;
+    height: 150px;
+    padding-left: 10px;
+}
+
+#submit
+{
+	margin-top: 5px;
+}
+
+.submit
+{
+	font-family: 'robotoregular', Georgia, Arial;
+	font-weight: bold;
+	height: 30px;
+	border-radius: 5px;
+	color: white;
+	border: 2px solid #6F9BBD;
+	background-color: #6F9BBD;
+	box-shadow: 0px 5px 5px #5a86a8; 
+	cursor: pointer;
+}
+
+
+
+
+
+
+/* Partie Responsive Design */
+/* Tablette format portrait */
+
+@media all and (max-width: 780px) {
+
+
+body
+{
+	max-width: 100%;
+	width: 100%;
+}
+
+header
+{
+	position: static;				/* Pour que le menu ne soit plus en haut de l'écran quand on défile */
+}
+
+
+header ul
+{
+	margin-right: auto;					/* Réglage du margin pour un meilleur alignement du header */
+}
+
+#banniere_image							/* Suppression de la bannière */
+{
+	display: none;
+}
+
+
+
+#apple_screen 							/* Suppression de l'image écran apple */
+{
+	display: none;
+}
+
+.text_center							/* Elargissement du texte pour un retour à la ligne moins fréquent */
+{
+	width: 60%;
+}
+
+hr 										/* Suppression des hr */
+{
+	display: none;
+}
+
+.chart									/* Alignement des deux logos avec le texte à droite dans la partie Service */
+{
+	margin-bottom: 40px;
+}
+
+.cubes									/* Alignement des deux logos avec le texte à droite dans la partie Service */
+{
+	margin-bottom: 43px;
+}
+
+#liste_service p					/* Agrandissement de la limite possible du texte pour mieux aller avec le format tablette */
+{
+	width: 80%;
+}
+
+
+#album 									/* Ajustement pour voir deux images au lieu d'une pour un meilleur rendu */
+{
+	width: 100%;
+}
+
+iframe									/* Agrandissement de la map en hauteur pour match avec la tablette */
+{
+	height: 710px;
+}
+
+form 									/* Ajustement de la taille en hauteur ainsi que du positionnement du formulaire */
+{
+	height: 520px;
+	top: 15%;
+}
+
+
+
+#contact
+{
+	height: 144.5vh;
+}
+
+
+
+/* Fin de l'accolade de la partie responsive tablette format portrait */
+}
+
+
+
+
+
+
+
+/* Responsive smartphones */
+@media all and (max-width: 480px) {
+
+
+
+/* Ajustement taille police */
+.text_center, p
+{
+	font-size: 90%;
+}
+
+h2
+{
+	font-size: 150%;
+}
+
+
+header
+{
+	display: flex;
+	flex-direction: column;
+	position: static; 						/* Pour que le menu ne soit plus en haut de l'écran quand on défile */
+}
+
+#logo
+{
+	
+}
+
+
+
+
+
+
+
+.menu
+{
+	display: none;
+}
+
+.menu-checkbox:checked ~ .menu
+{
+	display:block;
+}
+
+.menu-checkbox
+{
+	opacity: 0;
+	position: absolute;
+}
+
+.menu-toggle
+{
+	opacity: 1;
+	font-size: 200%;
+	font-weight: bold;
+	color: #5CADD3;
+}
+
+header
+{
+	align-items: center;
+}
+
+
+header nav
+{
+	display:flex; 				/* Alignement du hamburger et des boutons nav */
+	align-items: center; 		/* Centrer le hamburger avec les boutons nav */
+	margin-bottom: 15px;
+}
+
+header .menu li a
+{	
+	
+}
+
+header li 						/* Marge entre les textes de la nav */
+{
+	margin-bottom: 3px;
+}
+
+header ul 						
+{
+	margin: auto;
+}
+
+
+
+
+header nav a:hover   						/* Supression de la bordure lors de la sélection dans la nav */
+{
+	border: none;
+}
+
+.text_center
+{
+	width: 80%;
+}
+
+#conteneur_logo 							/* Réduction de la margin-left par rapport à la resolution initiale pour pas que ce soit si décallé à droite */
+{
+	margin-left: 30px;
+}
+
+
+
+
+#projets li 								/* Réduction de la taille de la police pour que la nav prenne qu'une seule ligne */
+{
+	font-size: 95%;
+}
+
+#projets ul 								/* Réduction de la marge entre sous titre h2 Projet, la nav et le portfolio */
+{
+	margin: 20px;
+}
+
+figure 										/* Modification de la margin pour s'adapter au mobile (centrer et plus petit espace entre chaque image) */
+{
+	margin: 20px;
+}
+
+#contact
+{
+
+}
+
+form
+{
+	position: static;   					/* Dissocier le formulaire de la map */
+	
+}
+
+
+
+
+
+
+
+/* Fin de l'accolade de la partie responsive mobile */
+}
+
+
+
+
+
+
+
+
+@-moz-document url-prefix() {            /* Ajustement pour Firefox */
+
+#projets li:hover:after 				 /* Modification vers le bas du triangle quand on hover la nav dans Projet avec Firefox */
+{
+	padding-top: 10px;
+}	
+
+#contact
+{
+	width: 99vw;
+	height: 62.5vh;   					/* Pour éviter que le fond bleu soit décaller */
+}
+
+#nom, #email, #objet  					/* Alignement des cases du formulaire */
+    {
+        width: 100%;
+    }
+
+}
+
+
+
+@supports (-ms-ime-align:auto) { 		/* Ajustement pour Edge */
+
+body 
+{
+	overflow-x: hidden;
+	width: 100%;
+}
+
+
+
+#projets li:hover:after 				/* Modification vers le bas du triangle quand on hover la nav dans Projet avec Edge */
+{
+	padding-top: 10px;
+}	
+
+#contact 								/* Pour éviter que le fond bleu soit décaller */
+{
+	height: 62.5vh;
+	width: 99.2vw;
+	
+}
+
+#nom, #email, #objet 					/* Alignement des cases du formulaire */
+    {
+        width: 100%;
+    }
+}
+
+
+
+
