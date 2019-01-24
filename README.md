@@ -1,4 +1,4 @@
-Projet 1 dans le cadre de la formation Développeur Web Junior sur OpenClassrooms.
+<strong> Projet 1: Intégrez la maquette d'un site d'une agence web </strong>
 
 Vous venez d'être embauché(e) par une agence Web, la WebAgency, qui réalise des sites web pour différents clients. Cependant, ils reconnaissent eux-mêmes que leur site actuel est vieillissant car ils ont peu de temps pour travailler dessus. Certes, il paraît que les cordonniers sont les plus mal chaussés, mais tout de même...
 
@@ -15,3 +15,5 @@ Des exemples de projets déjà réalisés
 Une carte avec un formulaire de contact (on ne vous demande pas de faire marcher le formulaire, juste de l'afficher).
 
 Le site sera réalisé en HTML et CSS (sans framework tel que Bootstrap).
+
+<strong>Projet dans le cadre de la formation Développeur Web Junior sur OpenClassrooms.</strong>
